@@ -1,4 +1,4 @@
-<header class="entry-header xspefix-entry-header"> 
+<header class="entry-header xspefix-entry-header">
     <?php if ( has_post_thumbnail() && !post_password_required() ) : ?>
         <figure class="entry-thumbnail">
             <?php the_post_thumbnail(); ?>

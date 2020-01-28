@@ -24,7 +24,7 @@ jQuery(function ($) {
         $fw_current_class = $options.find('.js-option-type-new-icon-item.active').data('value');
         $fw_current_icon.addClass($fw_current_class).css('display', 'block');
 
-        // search for icon 
+        // search for icon
         $options.find(".fw-icon-search").keyup(function () {
 
             var filter = $(this).val();

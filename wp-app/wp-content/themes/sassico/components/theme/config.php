@@ -5,5 +5,3 @@
 
 
 $cfg['settings_form_side_tabs'] = true;
-
-
