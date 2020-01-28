@@ -1,0 +1,17 @@
+.sassico_banner {
+  background-size: 100% 100%;
+}
+
+.sassico-innner-page-banner,
+.xs_single_blog_banner {
+  margin-top: rem(-101px);
+  min-height: rem(450px);
+}
+
+.xs-jumbotron-content-wraper {
+  padding-top: rem(101px);
+
+  @include small-device {
+    padding-top: rem(200px);
+  }
+}

@@ -1,0 +1,41 @@
+.sassico-back-to-top-wraper {
+    position: fixed;
+    z-index: 200;
+    &.arrow_only {
+        bottom: rem(57px);
+        right: rem(50px);
+    }
+    &.arrow_with_text {
+        bottom: rem(99px);
+        right: rem(103px);
+        .sassico-back-to-top {
+            font-size: rem(14px);
+            color: #6961f5;
+            writing-mode: vertical-lr;
+            line-height: 1;
+            > i {
+                margin-bottom: 3;
+            }
+            > svg {
+                margin-bottom: 9px;
+            }
+        }
+    }
+}
+
+.sassico-back-to-top {
+    cursor: pointer;
+    font-size: rem(20px);
+    color: #00d280;
+    display: block;
+    > img,
+    > svg {
+        width: rem(16px);
+    }
+    margin-bottom: 0;
+}
+
+.sassico-back-to-top-text {
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+}

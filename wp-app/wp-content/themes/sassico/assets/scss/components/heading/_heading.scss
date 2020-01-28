@@ -1,0 +1,17 @@
+.sassico_shape_underline_title {
+    .elementskit-section-subtitle {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: rem(-14px);
+            left: 0;
+            background-image: url('../images/title-bottom-shape.png');
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            height: rem(11px);
+            width: 100%;
+        }
+    }
+}

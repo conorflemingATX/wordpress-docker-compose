@@ -1,0 +1,177 @@
+.sassico-timeline {
+    &-content {
+        @include potrait-tablet-upper {
+            padding-left: 40px;
+        }
+
+        >p {
+            color: $bodyColor;
+        }
+    }
+
+    &-content,
+    &-image {
+        @include potrait-tablet-upper {}
+
+        padding: {
+            top: rem(70px);
+            bottom: rem(70px);
+        }
+
+        @include potrait-tablet {
+            padding: {
+                top: rem(35px);
+                bottom: rem(35px);
+            }
+        }
+    }
+
+    &-subtitle {
+        font-size: rem(20px);
+        color: $primary;
+        font-family: $bodyFont;
+        font-weight: 400;
+    }
+
+    &-title {
+        color: $titleColor;
+        font-weight: 600;
+        font-size: rem(36px);
+    }
+}
+
+.sassico-single-timeline {
+    @include potrait-tablet-upper {
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &:last-child {
+
+        .sassico-timeline-content,
+        .sassico-timeline-image {
+            padding-bottom: rem(70px * 0);
+        }
+    }
+}
+
+$letf_position: 25%;
+$width: calc(50% - #{$letf_position});
+$border: 2px dashed currentColor;
+$border_radius: 50px;
+$bottom: 2px;
+
+.sassico-timeline-bar {
+    @include potrait-tablet-upper {
+        color: #d4d9e6;
+
+        &:nth-child(even) {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: $letf_position;
+                bottom: $bottom;
+                width: $width;
+                height: calc(100% + #{$bottom * 2});
+                border-bottom: $border;
+                border-right: $border;
+                border-radius: 0 $border_radius $border_radius 0px;
+                border-top: $border;
+            }
+        }
+
+        &:nth-child(odd) {
+            .sassico-timeline-image {
+                text-align: right;
+            }
+
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                bottom: #{$bottom * 2};
+                left: 15px;
+                border-left: $border;
+                border-bottom: $border;
+                border-radius: $border_radius 0px 0px $border_radius;
+                width: $width;
+                height: 100%;
+                border-top: $border;
+            }
+
+
+            &:last-child {
+                &::before {
+                    border-bottom-left-radius: 0px;
+                }
+            }
+
+            &:first-child {
+                &::before {
+                    border-bottom: $border;
+                    border-bottom-left-radius: $border_radius;
+                }
+            }
+        }
+
+        &:last-child {
+            &::before {
+                border-bottom: none;
+                border-bottom-right-radius: 0px;
+            }
+        }
+
+        &:first-child {
+            &::before {
+                border-top: none;
+                border-top-left-radius: 0px;
+            }
+        }
+    }
+}
+
+@include potrait-tablet-upper {
+    .sassico-timeline {
+        &-subtitle {
+            position: relative;
+        }
+
+        &-pin {
+            display: block;
+            border-radius: 50%;
+            @include equal-size(20px);
+            background-color: rgba($color: $primary, $alpha: .3);
+            position: absolute;
+            top: 3px;
+            left: -48px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include equal-size(10px);
+                background-color: $primary;
+                border-radius: inherit;
+            }
+        }
+    }
+}
+
+.sassico-single-timeline {
+    @include potrait-tablet-upper {
+        &:nth-child(even) {
+            .sassico-timeline {
+                &-pin {
+                    top: 3px;
+                    left: -66px;
+                }
+            }
+        }
+    }
+}

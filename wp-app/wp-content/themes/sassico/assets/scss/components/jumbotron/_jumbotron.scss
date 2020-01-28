@@ -1,0 +1,26 @@
+.banner-solid {
+    background-color: $primary;
+}
+
+.xs-jumbotron {
+    min-height: 350px;
+}
+
+.xs-jumbotron-title {
+    color: $white;
+    margin-bottom: 12px;
+
+    @include small-device {
+        font-size: rem(24px);
+    }
+}
+
+.banner-bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.main-container {
+    padding: 80px 0;
+}

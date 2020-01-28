@@ -1,0 +1,95 @@
+// .elementskit-infobox {
+//     &:hover {
+//         z-index: 2;
+//     }
+// }
+
+.sassico_iconbox_hover_active {
+    .elementskit-infobox {
+        box-shadow: 0px 20px 45px 0px rgba(0, 0, 0, 0.05);
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &.elementskit_infobox_hover_dots {
+        .elementskit-infobox {
+            &::before {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.elementskit_infobox_hover_dots {
+    .elementskit-infobox {
+        overflow: visible !important;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url('../images/dots.png');
+            @include equal-size(rem(154px));
+            background-repeat: no-repeat;
+            bottom: -32px;
+            left: -32px;
+            z-index: -1;
+            transform: scale(0);
+            @include transition;
+        }
+
+        &:hover {
+            &::before {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.sassico_iconbox_advanced_hover_effect {
+    .elementskit-info-image-box {
+        &:hover {
+            .elementskit-box-header {
+                &::before {
+                    animation-play-state: running;
+                }
+            }
+        }
+    }
+
+    .elementskit-box-header {
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('../images/sass-4-iconbox-icon-bg.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: -1;
+            animation: iconbox_spin 2s linear infinite;
+            animation-play-state: paused;
+            pointer-events: none;
+        }
+
+        >img {
+            z-index: 2;
+        }
+    }
+}
+
+@keyframes iconbox_spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
