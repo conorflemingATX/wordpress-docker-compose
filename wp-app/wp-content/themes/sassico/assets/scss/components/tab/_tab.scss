@@ -1,0 +1,16 @@
+// .elementkit-tab-nav {
+//     .elementkit-nav-link {
+//         box-shadow: -44.548px 44.548px 65px 0px rgba(0, 0, 0, 0.07);
+//     }
+// }
+.elementkit-tab-wraper {
+    &.vertical {
+        align-items: end;
+
+        .nav-tabs {
+            .elementkit-nav-link {
+                overflow: hidden;
+            }
+        }
+    }
+}

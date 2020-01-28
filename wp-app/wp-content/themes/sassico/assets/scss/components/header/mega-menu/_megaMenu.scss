@@ -1,0 +1,28 @@
+@import '../_menu_variables.scss';
+
+@media (min-width: $style_mobile_menu_responsive_breakpoint+1px) {
+    .sassico_full_width_mega_menu {
+
+        .elementskit-navbar-nav-default.elementskit-menu-container,
+        .elementor-widget,
+        .elementor-widget-wrap,
+        .elementor-column-wrap,
+        .elementor-column {
+            position: static;
+        }
+
+
+        .elementor-background-overlay {
+            display: none;
+        }
+    }
+}
+
+.elementskit-navbar-nav-default {
+    .elementskit-megamenu-panel {
+        z-index: 100;
+        border: 0px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}

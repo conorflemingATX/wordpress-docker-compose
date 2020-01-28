@@ -1,0 +1,126 @@
+.sassico-sync-slider-content {
+    .sassico-stars {
+        margin-bottom: rem(22px);
+        position: relative;
+        overflow: hidden;
+
+        >li {
+            font-size: rem(18px);
+        }
+    }
+
+    >p {
+        font-size: rem(48px);
+        line-height: 1.185;
+        color: $black;
+        margin-bottom: 0px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    @include potrait-tablet-upper {
+        padding-right: rem(180px);
+    }
+}
+
+.sassico-sync-slider-top {
+    @include potrait-tablet-upper {
+        padding-bottom: rem(120px);
+    }
+
+    @include potrait-tablet {
+        padding-bottom: rem(40px);
+    }
+}
+
+.sassico-sync-slider-thumb {
+    cursor: pointer;
+
+    .sassico-testimonial-avatar-group {
+        @include equal-size(rem(60px));
+        border-radius: 50%;
+        flex: 0 0 rem(60px);
+        margin-right: rem(18px);
+
+        >img {
+            border-radius: inherit;
+        }
+    }
+
+    .sassico-client-details {
+        margin-bottom: 0px;
+    }
+
+    .sassico-client-designation {
+        font-size: rem(13px);
+    }
+}
+
+.sassico-sync-slider-thumbs {
+    .swiper-slide {
+        opacity: .3;
+        @include transition;
+    }
+
+    .swiper-slide-thumb-active {
+        opacity: 1;
+    }
+}
+
+.sassico_testimonial_style_three {
+    position: relative;
+
+    @include potrait-tablet-upper {
+        padding-top: rem(112px);
+
+        .sassico-testimonial-quote-image {
+            top: 0px;
+            right: rem(190px);
+        }
+    }
+}
+
+.sassico-testimonial-icon {
+    @include potrait-tablet-upper {
+        font-size: rem(120px);
+    }
+
+    @include potrait-tablet {
+        font-size: rem(60px);
+    }
+
+    color: #4b5c6e;
+}
+
+.sassico-sync-slider-content-wraper {
+    position: relative;
+
+    @include potrait-tablet-upper {
+        .sassico-nav-group {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 5;
+        }
+    }
+
+    @include potrait-tablet {
+        .sassico-nav-group {
+            margin-top: rem(15px);
+        }
+    }
+}
+
+.nav-button-large {
+    @include equal-size-lineHeight(60px, $Lheight: 56px);
+    border-color: rgba($color: $black, $alpha: .1);
+    font-size: rem(25px);
+}
+
+@include potrait-tablet {
+    .sassico-sync-slider-thumbs {
+        .sassico-testimonial-avatar-group {
+            margin-bottom: 0px;
+        }
+    }
+}

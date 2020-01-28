@@ -1,0 +1,234 @@
+.sassico-blog-post {
+    @include transition;
+    border-radius: rem(15px);
+    position: relative;
+    background-color: $white;
+
+    @include potrait-tablet {
+        margin-bottom: rem(30px);
+    }
+
+    &:hover {
+        .post-image {
+            >img {
+                transform: scale(1.08);
+            }
+        }
+    }
+
+    .post-image-wraper {
+        position: relative;
+        overflow: visible;
+    }
+
+    .post-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: rem(15px) rem(15px) 0 0;
+
+        >img {
+            @include transition;
+        }
+    }
+
+    .post-cats {
+        position: relative;
+        margin-left: 40px;
+        margin-top: -14.5px;
+    }
+
+    .post-cat {
+        display: inline-block;
+        box-shadow: 0px 7px 30px 0px rgba(0, 0, 0, 0.1);
+        border-radius: rem(14.5px);
+        background-color: $white;
+        color: #6610f2;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 500;
+        padding: rem(8px) rem(21px);
+        line-height: 1;
+
+        &::before {
+            content: "";
+            @include equal-size(5px);
+            border-radius: 50%;
+            background-color: currentColor;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        >a {
+            color: inherit;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &:hover {
+
+        .author-name,
+        .entry-title {
+            color: #6610f2;
+        }
+
+        box-shadow: 5.229px 59.772px 45px 0px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.sassico-post-body {
+    padding: rem(40px);
+
+    @include small-device {
+        padding: rem(20px);
+    }
+
+    .entry-title {
+        color: #111111;
+        font-size: rem(24px);
+        font-weight: 400;
+
+        margin: {
+            top: 0;
+            bottom: rem(40px);
+        }
+
+        font-family: $bodyFont;
+
+        >a {
+            color: inherit;
+        }
+    }
+
+    .entry-content {
+        >hr {
+            width: 100%;
+            background-color: #e7e7e7;
+            max-width: 100%;
+            height: 1px;
+            margin-bottom: rem(40px);
+        }
+    }
+
+}
+
+.post-author-info {
+    .author-img {
+        display: inline-block;
+        margin-right: rem(20px);
+
+        >img {
+            border-radius: 50%;
+            @include equal-size(rem(50px));
+        }
+    }
+
+    display: flex;
+
+    .author-name-and-date {
+        align-self: center;
+        line-height: 1;
+    }
+
+    .post-meta-date {
+        display: block;
+        color: #8020ff;
+        font-size: rem(13px);
+    }
+
+    .author-name {
+        color: #1a1a1a;
+        font-size: rem(18px);
+        margin-bottom: rem(4px);
+    }
+}
+
+.sassico-social-share-icon {
+    color: #fd3358;
+    font-size: rem(20px);
+    padding-top: 6px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sassico-social-share-wraper {
+    position: relative;
+    line-height: 1;
+
+    &:hover {
+        .sassico-social-share {
+            visibility: visible;
+            opacity: 1;
+            top: -36px;
+        }
+    }
+
+    .sassico-social-share {
+        .xs_share_url {
+            li {
+                a {
+                    padding: 5px 7px;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+.sassico-social-share {
+    white-space: nowrap;
+    display: block;
+    position: absolute;
+    right: -17px;
+    top: -100%;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 5px;
+    transition: all .4s ease-in-out;
+
+    &::before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 8px 8.5px 0 8.5px;
+        border-color: #ffffff transparent transparent transparent;
+        right: 17px;
+        bottom: -8px;
+    }
+
+    .xs_share_url {
+        >li {
+            display: inline-block;
+
+            >a {
+
+                .xs-social-follower,
+                .xs-social-follower-text,
+                .xs-social-follower-label {
+                    color: #111111;
+                }
+            }
+        }
+    }
+}
+
+.xs_social_share_widget {
+    .xs_share_url {
+        .xs-share-li {
+            a {
+                background-color: $white;
+
+                .xs-social-icon {
+                    span {
+                        color: #111111;
+                        font-size: rem(13px);
+                    }
+                }
+            }
+        }
+    }
+}

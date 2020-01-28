@@ -1,0 +1,49 @@
+.error404 {
+    .banner-bg {
+        margin-top: -101px;
+
+        // .xs-jumbotron-title {
+        //     padding-top: 85px;
+        // }
+    }
+
+    .error-page {
+        .error-code {
+            display: block;
+            font-size: 150px;
+            line-height: 150px;
+            color: #333;
+            margin-bottom: 20px;
+            text-shadow: 5px 5px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .error-message {
+            h3 {
+                font-size: 24px;
+            }
+        }
+
+        .error-body {
+            margin-top: 20px;
+
+            a.btn {
+                margin-top: 20px;
+                background-color: #042ff8;
+                border-color: #042ff8;
+                transition: all .5s;
+                padding: 12px 30px;
+
+                >i {
+                    padding-right: 7px;
+                }
+
+                &:hover {
+                    color: #fff;
+                    background-color: #0069d9;
+                    border-color: #0062cc;
+                    transform: translateX(-5px);
+                }
+            }
+        }
+    }
+}

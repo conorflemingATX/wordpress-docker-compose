@@ -1,0 +1,172 @@
+.sassico-language-switch {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    a {
+      .xs-flag {
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 9px;
+      }
+    }
+  }
+}
+
+.xs-promo-popup {
+  .modal-content {
+    background-color: transparent;
+    padding: 0px;
+    border: 0px;
+  }
+}
+
+.language-content {
+  P {
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.3333333333rem;
+  }
+}
+
+.flag-lists {
+  text-align: center;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: 25px;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #FFFFFF;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+
+      img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.zoom-anim-dialog.modal-language {
+  .modal-dialog.modal-lg {
+    max-width: 100%;
+  }
+}
+
+/*style 2*/
+.language_switch_two {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    a {
+      color: #792ef4;
+    }
+  }
+
+  li:not(:last-child) {
+    &:before {
+      content: '/';
+      position: absolute;
+      left: calc(100% + 5px);
+    }
+  }
+}
+
+@include potrait-tablet {
+  .flag-lists {
+    text-align: left;
+    column-count: 2;
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* magnific pop up modal */
+.mfp-bg {
+  &.xs-promo-popup {
+    background-color: rgba(0, 0, 0, .87);
+    padding-bottom: 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    animation: menu-animation .8s ease-out forwards;
+
+  }
+}
+
+
+/* Styles for dialog window */
+.xs-promo-popup {
+  .modal-content {
+    background-color: transparent;
+    padding: 0px;
+    border: 0px;
+  }
+
+  .mfp-close {
+    color: $white;
+    opacity: 0;
+    transition: all 1s ease .8s;
+    transform: translateY(-500px);
+  }
+
+  &.mfp-ready {
+    .mfp-close {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+/* at start */
+.xs-promo-popup {
+  &.my-mfp-slide-bottom {
+    .zoom-anim-dialog {
+      opacity: 0;
+      transition: all 1s ease .8s;
+      transform: translateY(-500px);
+    }
+
+    /* animate in */
+    &.mfp-ready {
+      .zoom-anim-dialog {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

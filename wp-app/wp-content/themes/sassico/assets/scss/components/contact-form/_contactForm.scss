@@ -1,0 +1,29 @@
+.ekit-form {
+    .wpcf7-form {
+        p {
+            position: relative;
+
+            .ajax-loader {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        .wpcf7-not-valid-tip {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.sassico-contact-form-2 {
+    .ekit-form {
+
+        input,
+        textarea {
+            @include inputPlaceholder {
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+}

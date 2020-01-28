@@ -1,0 +1,14 @@
+.elementskit-btn {
+    z-index: 1;
+}
+
+.ekit-wid-con {
+    .elementskit-btn {
+        &:before {
+            top: -1px !important;
+            left: -1px !important;
+            height: 108% !important;
+            width: 102% !important;
+        }
+    }
+}

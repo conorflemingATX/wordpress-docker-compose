@@ -1,0 +1,106 @@
+.sassico-hr-managemnt-testimonial {
+    .sassico-testimonial-content {
+        @include potrait-tablet-upper {
+            padding: {
+                left: rem(60px);
+                right: rem(60px);
+                top: rem(58px);
+                bottom: rem(60px);
+            }
+        }
+
+        @include potrait-tablet {
+            padding: {
+                left: rem(30px);
+                right: rem(30px);
+                top: rem(44px);
+                bottom: rem(30px);
+            }
+        }
+
+        background-color: #ff4800;
+        border-top-left-radius: rem(100px);
+
+        >p {
+            color: #ffdacc;
+            font-size: rem(18px);
+            margin-bottom: rem(0px);
+        }
+
+        z-index: 1;
+        position: relative;
+
+        @include potrait-tablet-upper {
+            margin-top: rem(274px);
+        }
+    }
+
+    .sassico-stars {
+        margin-bottom: rem(8px);
+
+        >li {
+            color: $white;
+        }
+    }
+
+    .sassico-client-name {
+        color: $white;
+        margin-bottom: rem(6px);
+        font-weight: 600;
+    }
+
+    .sassico-client-details {
+        margin-bottom: 0px;
+    }
+
+    .sassico-client-designation {
+        color: #ffb599;
+    }
+
+    .sassico-author-info-wraper {
+        margin-bottom: rem(45px);
+    }
+
+    @include potrait-tablet-upper {
+        .sassico-testimonial-avatar-group {
+            margin-right: rem(-270px);
+        }
+    }
+
+    .sassico-nav-group {
+        margin-top: 0px;
+        padding-left: rem(0);
+    }
+
+    .sassico-nav-group {
+        text-align: right;
+
+        margin: {
+            top: rem(10px);
+            right: rem(10px);
+        }
+    }
+}
+
+.nav-button-square {
+    border-radius: 0%;
+    border: 0px solid #000;
+    background-color: #ffa37f;
+    color: $white;
+    @include equal-size-lineHeight(rem(60px));
+
+    &:not(:last-child) {
+        margin-right: rem(-4px);
+    }
+
+    &:hover {
+        background-color: #ff4800;
+    }
+}
+
+@include small-device {
+    .sassico-hr-customized-service {
+        background-color: #ff4800 !important;
+        background-image: none !important;
+    }
+}

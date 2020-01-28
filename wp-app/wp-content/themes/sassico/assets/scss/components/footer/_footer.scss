@@ -1,0 +1,39 @@
+.xs-footer {
+    padding: 30px 0;
+
+    .footer-widget {
+        padding-left: 18px;
+    }
+}
+
+.copy-right {
+    padding: 20px 0;
+    background: #042ff8;
+    color: #fff;
+
+    .default-footer-social-media-link {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+.back_to_top {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+
+    a {
+        color: #fff;
+    }
+}
