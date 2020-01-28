@@ -1,0 +1,96 @@
+:root {
+    --sassico-working-process-color: #00d280;
+}
+
+.sassico-working-step {
+    display: inline-block;
+    line-height: normal;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 30%, rgba(0, 212, 255, 0) 70%);
+        pointer-events: none;
+        z-index: 1;
+    }
+}
+
+.sassico-working-step-text {
+    color: var(--sassico-working-process-color);
+    font-size: rem(64px);
+    font-weight: 500;
+    opacity: .5;
+}
+
+.sassico-working-process-icon {
+    @include equal-size-lineHeight(80px);
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--sassico-working-process-color);
+    position: relative;
+
+    >img {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.sassico-flat-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(45deg, rgba(0, 0, 0, .15) 0%, rgba(0, 212, 255, 0) 60%);
+}
+
+.sassico-flat-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: 0px 15px 15px 0px var(--sassico-working-process-color);
+    opacity: .3;
+}
+
+.sassico-working-process-icon-wraper {
+    margin-bottom: rem(20px);
+}
+
+.sassico-wokring-process-title {
+    color: var(--sassico-working-process-color);
+    font-size: rem(24px);
+    margin-bottom: 0;
+    font-weight: 400;
+    font-family: $bodyFont;
+}
+
+@include potrait-tablet-upper {
+    .sassico-single-working-steps {
+        >.sassico-single-working-step {
+            &:nth-child(even) {
+                .sassico-single-working-step-wraper {
+                    margin-top: rem(65px);
+                }
+            }
+        }
+    }
+}
+
+@include potrait-tablet {
+    .sassico-single-working-step-wraper {
+        margin-bottom: rem(30px);
+    }
+}

@@ -1,0 +1,96 @@
+/*
+Theme Name: sassico
+Theme URI: https://themeforest.net/user/xpeedstudio/portfolio
+Author: Xpeedstudio
+Author URI: https://xpeedstudio.com/
+Description: sassico is a Creative sass digital marketing WordPress Theme.
+Version: 1.1.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: sassico
+Tags: theme-options, post-formats, featured-images
+*/
+
+@import './varibale/_varibale';
+
+@import './mixin/_mixin';
+
+@import './mixin/_responsive_mixing';
+
+@import './reset/_predefine';
+
+@import './reset/_inheritance';
+
+@import './components/header/menu_styles';
+
+@import './components/header/_standard';
+
+@import './components/header/verticalMenu';
+
+@import './components/jumbotron/jumbotron';
+
+@import './components/banner/_banner';
+
+@import './components/breadcumb/_breadcumb';
+
+@import './components/icon-box/_iconBox';
+
+@import './components/tab/_tab';
+
+@import './components/elementor-text-editor/_elementorTextEditor';
+
+@import './lauouts/testimonial/_testimonial';
+
+@import './lauouts/video-popup/_videoPopup';
+
+@import './lauouts/working-step/_workingStep';
+
+@import './lauouts/blog/blog';
+
+@import './lauouts/header-top/headerTop';
+
+@import './lauouts/back-to-top/backToTop';
+
+@import './lauouts/404/404';
+
+@import './lauouts/direction-aware-hover/directionAwareHover';
+
+@import './lauouts/gallery-slider/gallerySlider';
+
+@import './components/double-btn/_doubleBtn';
+
+@import './components/team/_team';
+
+@import './components/creative-button/_creativeButton';
+
+@import './components/contact-form/_contactForm';
+
+@import './components/portfolio/_portfolio';
+
+@import './components/service/_service';
+
+@import './components/timeline/_timeline';
+
+@import './components/pricing/_pricing';
+
+@import './components/call-to-action/_callToAction';
+
+@import './components/video/_video';
+
+@import './components/title/_title';
+
+@import './components/gallery/gallery';
+
+@import './components/heading/heading';
+
+@import './components/language-switch/_language-switch';
+
+@import './components/header/mega-menu/_megaMenu';
+
+@import './components/footer/_footer';
+
+@import './components/lazy-load/lazyLoad';
+
+@import './components/custom_arrow/customArrow';
+
+@import './components/btn/btn';

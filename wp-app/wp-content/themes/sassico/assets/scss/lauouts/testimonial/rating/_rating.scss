@@ -1,0 +1,17 @@
+.sassico-stars {
+    @include remove-list-sltye;
+    margin-bottom: rem(15px);
+
+    >li {
+        display: inline-block;
+        color: $rating_color;
+
+        &:not(:last-child) {
+            margin-right: 3px;
+        }
+
+        >.fa {
+            font-family: $iconFont;
+        }
+    }
+}

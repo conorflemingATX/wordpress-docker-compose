@@ -1,0 +1,106 @@
+.profile-card {
+    .profile-header {
+        @include transition;
+    }
+
+    &:hover {
+        .profile-header {
+            background-color: #f4f7fd !important;
+        }
+    }
+}
+
+.sassico-team-style-2 {
+    .profile-card {
+        &:hover {
+            .profile-header {
+                background-color: inherit !important;
+            }
+        }
+
+        position: relative;
+
+        &:hover {
+            @include potrait-tablet-upper {
+                &::after {
+                    transform: translate(-30px, 30px);
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            &::before {
+                opacity: 1;
+                transition: opacity 0.2s ease;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+            background-color: #fff;
+            transition: opacity 0.2s ease 0.3s;
+        }
+
+        @include potrait-tablet-upper {
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: 0;
+                left: 0;
+                @include equal-size(154px);
+                background-image: url('../images/dots.png');
+                opacity: 0;
+                visibility: hidden;
+                z-index: -1;
+                transition: all 0.2s ease .2s;
+            }
+        }
+    }
+
+    .profile-body,
+    .profile-footer,
+    .profile-header,
+    .profile-header.ekit-img-overlay {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.sassico-team-featured {
+    .profile-card {
+        box-shadow: 0px 20px 45px 0px rgba(0, 0, 0, 0.05) !important;
+        transform: translateY(-5px);
+
+        @include potrait-tablet-upper {
+            &::after {
+                transform: translate(-30px, 30px);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .profile-title {
+            color: #042ff8 !important;
+        }
+
+        &::before {
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
+    }
+
+    &.sassico-team-style-2 {
+        .profile-card {
+            .profile-header {
+                background-color: #eeeeff !important;
+            }
+        }
+    }
+}

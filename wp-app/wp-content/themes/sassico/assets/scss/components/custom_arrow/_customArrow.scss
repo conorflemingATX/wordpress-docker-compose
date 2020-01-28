@@ -1,0 +1,36 @@
+.sassico_custom_arrow {
+    .ekit-wid-con {
+        .elementskit-clients-slider {
+            .slick {
+                &-arrow {
+                    top: 0;
+                    width: 50% !important;
+                    height: 100% !important;
+                    transform: none;
+
+                    >i {
+                        display: none;
+                    }
+
+                }
+
+                &-prev {
+                    left: 0 !important;
+
+                    &:hover {
+                        cursor: url('../images/left-arrow.svg'), auto;
+
+                    }
+                }
+
+                &-next {
+                    right: 0 !important;
+
+                    &:hover {
+                        cursor: url('../images/right-arrow.svg'), auto;
+                    }
+                }
+            }
+        }
+    }
+}

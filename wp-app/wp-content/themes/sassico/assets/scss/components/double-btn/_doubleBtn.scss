@@ -1,0 +1,23 @@
+.ekit-double-btn {
+    >i {
+        vertical-align: middle;
+        display: inline-block;
+        // font-size: rem(22px);
+
+        &::before {
+            vertical-align: middle;
+        }
+    }
+}
+
+.ekit-double-btn-two {
+    >i {
+        margin-top: -9px;
+    }
+}
+
+.ekit-double-btn-one {
+    >i {
+        margin-top: -3px;
+    }
+}

@@ -1,0 +1,108 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $titleFont;
+    color: $titleColor;
+    font-weight: 700;
+    letter-spacing: -.4px;
+}
+
+a {
+    display: inline-block;
+    color: $bodyColor;
+    @include transition;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+/* remove from control focus box shadow */
+.form-control {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+a {
+    @include transition;
+}
+
+
+// p {
+//     &:last-child {
+//         margin-bottom: 0px;
+//     }
+// }
+
+/* input type number spinner turn of chrome */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    // -webkit-appearance: none;
+    margin: 0;
+}
+
+/* input type number spinner turn of firefox */
+
+input[type=number] {
+    // -moz-appearance: textfield;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+h5 {
+    font-size: $h5;
+}
+
+h6 {
+    font-size: $h6;
+}
+
+.entry-content,
+.comment-content {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    h6 {
+        font-size: 14px;
+    }
+}
+
+.xs_page_wrapper {
+    overflow: hidden !important;
+}

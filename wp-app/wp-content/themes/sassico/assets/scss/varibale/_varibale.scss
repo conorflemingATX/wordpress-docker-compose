@@ -1,0 +1,44 @@
+$white: #FFFFFF;
+$black: #000000;
+
+$primary: #042ff8;
+$secondary: #f3bc3f;
+
+$rating_color: #fec42d;
+
+// home 4
+$home_4_primary: #00d280;
+$home_4_secondary: #666666;
+
+$bodyFont: 'Roboto',
+sans-serif;
+$titleFont: 'Poppins',
+sans-serif;
+$iconFont: 'FontAwesome';
+
+$bodyFontSize: 16px;
+$bodyFontWeight: 400;
+$blineHeight: 26px / $bodyFontSize;
+
+
+$h1: 72px;
+$h2: 60px;
+$h3: 48px;
+$h4: 36px;
+$h5: 30px;
+$h6: 24px;
+
+$titleColor: #1a1a1a;
+$bodyColor: #777777;
+
+@function rem($pixels, $context: $bodyFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}
